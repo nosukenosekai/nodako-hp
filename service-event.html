@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>新卒採用イベント｜株式会社Nodako</title>
+<meta name="description" content="意欲の高い学生と企業が直接出会う新卒採用イベントの企画・運営。共催イベント「THE 就活」の実績を起点に、質の高いマッチングを設計します。" />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#1b3a6b" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--navy:#1b3a6b;--blue:#2563ff;--blue-l:#5b8def;--mint:#15c79a;--paper2:#f4f7fc;--line:#e3e9f4;--text:#1a2542;--muted:#65718e;--grad:linear-gradient(120deg,#2563ff,#4f86ff)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:#fff;line-height:1.9;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.86);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.28rem;letter-spacing:-.02em;color:var(--navy)}
+  .brand .mark{width:28px;height:28px;border-radius:8px;background:var(--grad);position:relative;box-shadow:0 6px 16px rgba(37,99,255,.35)}
+  .brand .mark::after{content:"";position:absolute;inset:7px 7px auto auto;width:8px;height:8px;border-radius:50%;background:var(--mint)}
+  .nav-cta{background:var(--navy);color:#fff;padding:.6em 1.3em;border-radius:999px;font-size:.86rem;font-weight:700}
+  .dhero{background:linear-gradient(155deg,#1f3f7c 0%,#27539a 52%,#1c3c72 100%);color:#fff;padding:60px 0 56px}
+  .crumb{font-size:.82rem;color:#9fc0ff}.crumb a:hover{text-decoration:underline}
+  .dhero .no{font-family:'Space Grotesk';font-weight:700;font-size:.78rem;letter-spacing:.18em;color:#9fc0ff;margin-top:18px}
+  .dhero h1{font-size:clamp(1.9rem,4.6vw,2.9rem);font-weight:900;margin-top:8px;line-height:1.3}
+  .dhero .sub{font-family:'Outfit';font-weight:600;color:#c4cfe6;margin-top:6px;letter-spacing:.03em}
+  .dhero p{margin-top:20px;max-width:640px;color:#d4ddf0;font-size:1rem}
+  main{padding:64px 0 30px}
+  .sec{margin-bottom:60px}
+  .sec .lbl{font-family:'Space Grotesk';font-size:.72rem;letter-spacing:.24em;font-weight:700;color:var(--blue)}
+  .sec h2{font-size:clamp(1.4rem,3vw,1.85rem);font-weight:900;color:var(--navy);margin-top:10px;line-height:1.32}
+  .sec .intro{margin-top:14px;color:var(--muted)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+  .card{background:var(--paper2);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .card .ic{width:42px;height:42px;border-radius:11px;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:'Space Grotesk';font-weight:700;margin-bottom:14px}
+  .card h3{font-size:1.04rem;font-weight:700;color:var(--navy)}
+  .card p{margin-top:8px;font-size:.92rem;color:var(--muted)}
+  .probs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+  .prob{border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:12px;padding:20px 22px;background:#fff;font-weight:500;color:var(--navy);font-size:.96rem}
+  .prob span{color:var(--blue);font-weight:700;margin-right:6px}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+  .step{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:22px 20px}
+  .step .n{font-family:'Space Grotesk';font-weight:700;color:var(--blue);font-size:.82rem}
+  .step h4{font-size:1rem;font-weight:700;color:var(--navy);margin-top:8px}
+  .step p{margin-top:6px;font-size:.86rem;color:var(--muted)}
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:26px;background:var(--navy);border-radius:18px;padding:34px 30px;color:#fff}
+  .metrics .m .n{font-family:'Space Grotesk';font-weight:700;font-size:1.9rem;color:#fff}
+  .metrics .m .n span{font-size:.5em;color:#9fc0ff}
+  .metrics .m .t{font-size:.8rem;color:#aebbd6;margin-top:6px}
+  .cta{background:var(--grad);border-radius:24px;padding:54px 30px;text-align:center;color:#fff;margin-bottom:40px}
+  .cta h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:900}
+  .cta p{margin-top:12px;color:rgba(255,255,255,.92)}
+  .cta .btn{display:inline-flex;align-items:center;gap:.5em;margin-top:24px;background:#fff;color:var(--navy);font-weight:700;padding:.85em 1.7em;border-radius:999px}
+  .back-link{display:inline-block;margin:6px 0 50px;color:var(--blue);font-weight:700;font-size:.92rem}
+  footer{background:linear-gradient(165deg,#1f3f7c,#16315e);color:#fff;padding:40px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+  footer .brand{color:#fff}footer .small{color:#9aa9c8;font-size:.8rem}footer a{color:#c4cfe6}
+  @media(max-width:820px){.cards,.probs,.flow{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><span class="mark"></span>Nodako</a>
+    <a href="index.html#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</header>
+
+<div class="dhero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">トップ</a> ／ <a href="index.html#service">サービス</a> ／ 新卒採用イベント</div>
+    <div class="no">SERVICE 01</div>
+    <h1>新卒採用イベント</h1>
+    <div class="sub">Recruiting Events</div>
+    <p>意欲の高い学生と企業が直接出会う、新卒採用イベントを企画・運営します。共催イベント「THE 就活」を起点に、母集団の“数”ではなく出会いの“質”で採用を前に進めます。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <section class="sec">
+      <div class="lbl">CHALLENGES</div>
+      <h2>こんな採用課題に。</h2>
+      <div class="probs">
+        <div class="prob"><span>01</span>応募数は集まるが、本気度の高い学生に出会えない</div>
+        <div class="prob"><span>02</span>説明会では自社の魅力が学生に伝わりきらない</div>
+        <div class="prob"><span>03</span>上位校・意欲層へのリーチ手段が限られている</div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="lbl">WHAT WE DO</div>
+      <h2>提供内容</h2>
+      <p class="intro">企画から集客、当日運営、開催後のレポートまで一気通貫で伴走します。</p>
+      <div class="cards">
+        <div class="card"><div class="ic">01</div><h3>イベント企画・設計</h3><p>目的・ターゲットに合わせて、出会いの形式と体験を設計します。</p></div>
+        <div class="card"><div class="ic">02</div><h3>学生集客</h3><p>意欲の高い学生・上位校層を中心に、参加者を集めます。</p></div>
+        <div class="card"><div class="ic">03</div><h3>当日運営・進行</h3><p>少人数マッチング形式の進行・ファシリテーションを担います。</p></div>
+        <div class="card"><div class="ic">04</div><h3>マッチング設計</h3><p>企業と学生が深く話せる組み合わせ・導線を設計します。</p></div>
+        <div class="card"><div class="ic">05</div><h3>開催後レポート</h3><p>参加者の反応・満足度を可視化し、次の打ち手につなげます。</p></div>
+        <div class="card"><div class="ic">06</div><h3>継続的な改善</h3><p>毎回の結果をもとに、出会いの質を磨き続けます。</p></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="lbl">TRACK RECORD</div>
+      <h2>共催イベント「THE 就活」の実績</h2>
+      <div class="metrics">
+        <div class="m"><div class="n">94<span>%</span></div><div class="t">参加学生の「大満足・満足」</div></div>
+        <div class="m"><div class="n">32<span>名</span></div><div class="t">参加学生数</div></div>
+        <div class="m"><div class="n">91<span>%</span></div><div class="t">早慶＋MARCH比率</div></div>
+        <div class="m"><div class="n">4<span>社</span></div><div class="t">参加企業数</div></div>
+      </div>
+      <p class="intro" style="font-size:.8rem">※ 2024年12月14日開催「THE 就活」（株式会社CAREER FOCUS・株式会社Nodako 共催）の実績。</p>
+    </section>
+
+    <section class="sec">
+      <div class="lbl">FLOW</div>
+      <h2>進め方</h2>
+      <div class="flow">
+        <div class="step"><div class="n">STEP 1</div><h4>ヒアリング</h4><p>採用目標・求める学生像を整理します。</p></div>
+        <div class="step"><div class="n">STEP 2</div><h4>企画・設計</h4><p>イベント形式と集客プランを設計します。</p></div>
+        <div class="step"><div class="n">STEP 3</div><h4>集客・開催</h4><p>学生を集め、当日の運営まで担います。</p></div>
+        <div class="step"><div class="n">STEP 4</div><h4>レポート</h4><p>結果を可視化し、次回へ改善します。</p></div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <h2>採用イベントの相談をする</h2>
+      <p>自社に合った出会いの場を、一緒に設計しませんか。</p>
+      <a href="mailto:event@nodako.co.jp?subject=採用イベントの相談（Nodako）" class="btn">メールで相談する →</a>
+    </div>
+
+    <a href="index.html#service" class="back-link">← サービス一覧へ戻る</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="mark"></span>Nodako</a>
+    <div class="small">© 2025 Nodako, Inc. ｜ <a href="index.html">トップへ戻る</a></div>
+  </div>
+</footer>
+</body>
+</html>

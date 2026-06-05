@@ -133,16 +133,16 @@
 
   /* ---------- Section base ---------- */
   section.block{padding:108px 0}
-  .sec-head{max-width:720px}
-  .sec-head h2{font-weight:900;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;letter-spacing:-.01em;margin:16px 0 0;color:var(--navy)}
-  .sec-head p{margin-top:18px;color:var(--muted);font-size:1.02rem}
+  .sec-head{max-width:860px}
+  .sec-head h2{font-weight:900;font-size:clamp(1.7rem,3.3vw,2.5rem);line-height:1.28;letter-spacing:-.01em;margin:16px 0 0;color:var(--navy)}
+  .sec-head p{margin-top:16px;color:var(--muted);font-size:1.02rem;line-height:1.85}
   .center{text-align:center;margin-left:auto;margin-right:auto}
   .center .label{justify-content:center}
 
   /* ---------- About ---------- */
   .about{background:var(--paper2)}
   .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;margin-top:56px}
-  .about-copy h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;line-height:1.5;color:var(--navy)}
+  .about-copy h3{font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:900;line-height:1.45;color:var(--navy)}
   .about-copy h3 em{font-style:normal;color:var(--blue)}
   .about-copy p{margin-top:22px;color:var(--muted);font-size:1.02rem}
   .about-points{display:flex;flex-direction:column;gap:16px}
@@ -168,31 +168,32 @@
   .svc .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .svc .tags span{font-size:.76rem;color:var(--navy);background:var(--paper2);border:1px solid var(--line);padding:.35em .9em;border-radius:999px}
 
-  /* ---------- Works / 実績 ---------- */
-  .works{background:linear-gradient(165deg,#1f3f7c,#1b3a6b 60%,#16315e);color:#fff;position:relative;overflow:hidden}
-  .works::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 85% 8%,rgba(91,141,239,.42),transparent 62%)}
-  .works .wrap{position:relative;z-index:2}
-  .works .sec-head h2{color:#fff}
-  .works .sec-head p{color:#b9c4dd}
-  .works .label{color:#7fa7ff}.works .label::before{background:#7fa7ff}
+  /* ---------- Works / 実績（白基調） ---------- */
+  .works{background:var(--paper2);position:relative;overflow:hidden}
   .case{
-    margin-top:56px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
-    border:1px solid rgba(255,255,255,.13);border-radius:24px;padding:48px;
+    margin-top:56px;background:#fff;
+    border:1px solid var(--line);border-radius:24px;padding:48px;
+    box-shadow:0 24px 60px rgba(10,22,51,.07);
     display:grid;grid-template-columns:1fr 1px 1.15fr;gap:48px;align-items:center;
   }
-  .case .vline{background:rgba(255,255,255,.13)}
-  .case-tag{display:inline-block;font-family:'Space Grotesk';font-weight:700;font-size:.74rem;letter-spacing:.16em;color:#16e6a8;border:1px solid rgba(22,230,168,.4);padding:.4em 1em;border-radius:999px}
-  .case h3{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:900;margin:20px 0 0;line-height:1.4}
-  .case .desc{margin-top:18px;color:#c4cfe6;font-size:.98rem}
-  .case .co{margin-top:26px}
-  .case .co .cap{font-size:.74rem;letter-spacing:.2em;color:#8fa0c2;font-family:'Space Grotesk'}
-  .case .co .names{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-  .case .co .names span{font-size:.84rem;font-weight:500;color:#dbe3f4;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:.5em 1em;border-radius:10px}
+  .case .vline{background:var(--line)}
+  .case-tag{display:inline-block;font-family:'Space Grotesk';font-weight:700;font-size:.74rem;letter-spacing:.16em;color:var(--blue);border:1px solid rgba(37,99,255,.3);background:rgba(37,99,255,.06);padding:.4em 1em;border-radius:999px}
+  .case h3{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:900;margin:18px 0 0;line-height:1.3;color:var(--navy)}
+  .case .desc{margin-top:16px;color:var(--muted);font-size:.98rem;line-height:1.85}
+  .case .co{margin-top:28px}
+  .case .co .cap{font-size:.72rem;letter-spacing:.2em;color:#9aa9c8;font-family:'Space Grotesk'}
+  .logo-wall{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+  .logo-tile{
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    min-height:62px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;
+    background:#fff;font-size:.82rem;font-weight:700;color:var(--navy);line-height:1.3;
+  }
+  .logo-tile img{max-height:34px;width:auto}
   .case-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 32px}
-  .cm .n{font-family:'Space Grotesk';font-weight:700;font-size:clamp(2rem,3.8vw,3rem);line-height:1;background:linear-gradient(120deg,#7fa7ff,#16e6a8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .cm .n span{font-size:.42em;-webkit-text-fill-color:#7fa7ff}
-  .cm .t{margin-top:10px;font-size:.86rem;color:#aab6d2}
-  .works-note{margin-top:26px;font-size:.8rem;color:#8492b3}
+  .cm .n{font-family:'Space Grotesk';font-weight:700;font-size:clamp(2rem,3.8vw,3rem);line-height:1;color:var(--blue)}
+  .cm .n span{font-size:.42em;color:var(--blue-l)}
+  .cm .t{margin-top:10px;font-size:.86rem;color:var(--muted)}
+  .works-note{margin-top:26px;font-size:.8rem;color:#9aa9c8}
 
   /* ---------- Why ---------- */
   .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
@@ -228,6 +229,22 @@
   .cta-inner .btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.2)}
   .cta-mail{margin-top:22px;font-family:'Space Grotesk';font-size:.94rem;color:rgba(255,255,255,.85)}
 
+  /* ---------- Service link ---------- */
+  .svc-link{display:inline-flex;align-items:center;gap:.5em;margin-top:22px;font-size:.9rem;font-weight:700;color:var(--blue)}
+  .svc-link .arr{transition:transform .2s}
+  .svc:hover .svc-link .arr{transform:translateX(4px)}
+
+  /* ---------- News ---------- */
+  .news{background:var(--paper2)}
+  .news-list{margin-top:48px;border-top:1px solid var(--line)}
+  .news-item{display:grid;grid-template-columns:150px 116px 1fr auto;gap:24px;align-items:center;padding:24px 6px;border-bottom:1px solid var(--line);transition:background .2s}
+  a.news-item:hover{background:#fff}
+  .news-item .date{font-family:'Space Grotesk';font-size:.86rem;color:var(--muted)}
+  .news-item .cat{justify-self:start;font-size:.7rem;font-weight:700;letter-spacing:.08em;color:var(--blue);background:rgba(37,99,255,.07);border:1px solid rgba(37,99,255,.2);padding:.32em .8em;border-radius:999px}
+  .news-item .ttl{font-size:.98rem;font-weight:500;color:var(--navy)}
+  .news-item .go{color:#9aa9c8;font-weight:700}
+  a.news-item:hover .go{color:var(--blue)}
+
   /* ---------- Footer ---------- */
   footer{background:linear-gradient(165deg,#1f3f7c,#16315e);color:#fff;padding:64px 0 30px}
   .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:34px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
@@ -259,6 +276,9 @@
     .case .vline{display:none}
     .case-metrics{grid-template-columns:repeat(2,1fr)}
     .comp-vis{position:static}
+    .news-item{grid-template-columns:auto 1fr;gap:8px 16px;row-gap:8px}
+    .news-item .ttl{grid-column:1 / -1}
+    .news-item .go{display:none}
   }
   @media(max-width:560px){
     .hero-stats{grid-template-columns:repeat(2,1fr);gap:26px 18px}
@@ -277,6 +297,7 @@
       <a href="#about">About</a>
       <a href="#service">Service</a>
       <a href="#works">Works</a>
+      <a href="#news">News</a>
       <a href="#company">Company</a>
       <a href="#contact" class="nav-cta">お問い合わせ</a>
     </nav>
@@ -318,12 +339,12 @@
       </div>
       <div class="about-grid">
         <div class="about-copy reveal">
-          <h3>「のどか（Nodako）」は、<br>学生と企業が<em>本音で出会える</em>場をつくる会社。</h3>
-          <p>大量の母集団を追うのではなく、企業が本当に会いたい学生と、深く・誠実に出会う。Nodakoは選抜制イベントの運営から採用ブランディング、そしてそれを支えるシステム開発までを一気通貫で手がけ、採用を「数」ではなく「質」で前に進めます。</p>
+          <h3>「のだこ（Nodako）」は、<br>学生と企業が<em>本音で出会える</em>場をつくる会社。</h3>
+          <p>大量の母集団を追うのではなく、企業が本当に会いたい学生と、深く・誠実に出会う。Nodakoは採用イベントの運営から採用ブランディング、そしてそれを支えるシステム開発までを一気通貫で手がけ、採用を「数」ではなく「質」で前に進めます。</p>
         </div>
         <div class="about-points reveal">
           <div class="pt"><div class="ico">01</div><div><h4>Z世代インサイト起点</h4><p>学生の生の声・行動データを採用設計の土台に置く。</p></div></div>
-          <div class="pt"><div class="ico">02</div><div><h4>選抜 × 少人数マッチング</h4><p>厳選された学生と企業を、深く出会わせる場づくり。</p></div></div>
+          <div class="pt"><div class="ico">02</div><div><h4>少人数で深く出会う</h4><p>意欲ある学生と企業が、納得いくまで向き合える場づくり。</p></div></div>
           <div class="pt"><div class="ico">03</div><div><h4>プロダクトで仕組み化</h4><p>採用プラットフォームを自社開発し、継続的に運用へ。</p></div></div>
         </div>
       </div>
@@ -339,34 +360,38 @@
         <p>単発のイベントで終わらせない。出会いを設計し、ブランドを磨き、それを支えるプロダクトまで。企業の採用を一気通貫で前進させます。</p>
       </div>
       <div class="svc-grid">
-        <div class="svc reveal">
+        <a class="svc reveal" href="service-event.html">
           <div class="no">SERVICE 01</div>
-          <h3>選抜制採用イベント</h3>
+          <h3>新卒採用イベント</h3>
           <div class="sub">Recruiting Events</div>
-          <p>厳選した学生と企業が直接出会う、選抜制の採用イベントを企画・運営。共催イベント「THE 就活」では、上位校の意欲ある学生と企業の質の高いマッチングを実現しています。</p>
+          <p>意欲の高い学生と企業が直接出会う、新卒採用イベントを企画・運営。共催イベント「THE 就活」では、上位校の学生と企業の質の高いマッチングを実現しています。</p>
           <div class="tags"><span>イベント企画</span><span>学生集客</span><span>当日運営</span></div>
-        </div>
-        <div class="svc reveal">
+          <span class="svc-link">詳細を見る <span class="arr">→</span></span>
+        </a>
+        <a class="svc reveal" href="service-consulting.html">
           <div class="no">SERVICE 02</div>
           <h3>採用コンサルティング</h3>
           <div class="sub">Recruiting Consulting</div>
           <p>採用戦略の設計から、ターゲット定義・選考フロー改善・内定者フォローまで伴走。Z世代の意思決定を理解したうえで、企業ごとにオーダーメイドの採用を組み立てます。</p>
           <div class="tags"><span>採用戦略</span><span>選考設計</span><span>母集団形成</span></div>
-        </div>
-        <div class="svc reveal">
+          <span class="svc-link">詳細を見る <span class="arr">→</span></span>
+        </a>
+        <a class="svc reveal" href="service-branding.html">
           <div class="no">SERVICE 03</div>
           <h3>採用ブランディング</h3>
           <div class="sub">Employer Branding</div>
           <p>「なぜこの会社で働くのか」を学生の言葉に翻訳。カルチャーや人の魅力を、Z世代に伝わるコンテンツ・コミュニケーション設計へと落とし込みます。</p>
           <div class="tags"><span>採用広報</span><span>コンテンツ設計</span><span>Z世代リサーチ</span></div>
-        </div>
-        <div class="svc reveal">
+          <span class="svc-link">詳細を見る <span class="arr">→</span></span>
+        </a>
+        <a class="svc reveal" href="service-development.html">
           <div class="no">SERVICE 04</div>
           <h3>システム開発</h3>
           <div class="sub">System Development</div>
           <p>新卒採用プラットフォームを自社で開発・運営。採用の現場で得た知見をプロダクトに還元し、企業の採用活動を継続的に仕組み化します。</p>
           <div class="tags"><span>採用プラットフォーム</span><span>自社開発</span><span>運用</span></div>
-        </div>
+          <span class="svc-link">詳細を見る <span class="arr">→</span></span>
+        </a>
       </div>
     </div>
   </section>
@@ -376,28 +401,29 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="label">Works</span>
-        <h2>選抜制新卒採用イベント<br>「THE 就活」開催実績</h2>
-        <p>株式会社CAREER FOCUSとの共催で、厳選された学生と注目企業の新たな出会いを創出しました。</p>
+        <h2>新卒採用イベント<br>「THE 就活」開催実績</h2>
+        <p>株式会社CAREER FOCUSとの共催で、意欲ある学生と注目企業の新たな出会いを創出しました。</p>
       </div>
       <div class="case reveal">
         <div class="case-left">
-          <span class="case-tag">SELECTED EVENT</span>
+          <span class="case-tag">RECRUITING EVENT</span>
           <h3>THE 就活</h3>
           <p class="desc">2024年12月14日、TOMOSUBA（東京都千代田区）にて開催。少人数マッチング形式で、学生と企業が“他では得られない情報”に出会う場を実現しました。</p>
           <div class="co">
             <div class="cap">PARTICIPATING COMPANIES</div>
-            <div class="names">
-              <span>GMOインターネットグループ</span>
-              <span>NTT都市開発</span>
-              <span>オープンハウスグループ</span>
-              <span>森ビル</span>
+            <!-- ロゴ画像を入れる場合：<div class="logo-tile"><img src="logo-gmo.png" alt="GMOインターネットグループ"></div> のように差し替え -->
+            <div class="logo-wall">
+              <div class="logo-tile">GMOインターネット<br>グループ</div>
+              <div class="logo-tile">NTT都市開発</div>
+              <div class="logo-tile">オープンハウス<br>グループ</div>
+              <div class="logo-tile">森ビル</div>
             </div>
           </div>
         </div>
         <div class="vline"></div>
         <div class="case-metrics">
           <div class="cm"><div class="n">94<span>%</span></div><div class="t">参加学生の「大満足・満足」</div></div>
-          <div class="cm"><div class="n">32<span>名</span></div><div class="t">選抜参加学生数</div></div>
+          <div class="cm"><div class="n">32<span>名</span></div><div class="t">参加学生数</div></div>
           <div class="cm"><div class="n">91<span>%</span></div><div class="t">早慶（50%）＋MARCH（41%）</div></div>
           <div class="cm"><div class="n">4<span>社</span></div><div class="t">参加企業数</div></div>
         </div>
@@ -433,6 +459,31 @@
     </div>
   </section>
 
+  <!-- NEWS -->
+  <section class="block news" id="news">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">News</span>
+        <h2>お知らせ</h2>
+        <p>Nodakoの最新の取り組み・プレスリリースをお届けします。</p>
+      </div>
+      <div class="news-list reveal">
+        <a class="news-item" href="https://www.atpress.ne.jp/news/423672" target="_blank" rel="noopener">
+          <span class="date">2024.12.14</span>
+          <span class="cat">イベント</span>
+          <span class="ttl">新卒採用イベント「THE 就活」の開催報告と今後の展望 ～学生と企業の新たな出会いを実現～</span>
+          <span class="go">→</span>
+        </a>
+        <div class="news-item">
+          <span class="date">2024.06.06</span>
+          <span class="cat">お知らせ</span>
+          <span class="ttl">株式会社Nodakoを設立しました。</span>
+          <span class="go"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- COMPANY -->
   <section class="block company" id="company">
     <div class="wrap">
@@ -455,7 +506,7 @@
             <tr><th>資本金</th><td>50万円</td></tr>
             <tr><th>代表取締役</th><td>萩原 琴弥</td></tr>
             <tr><th>所在地</th><td>東京都渋谷区</td></tr>
-            <tr><th>事業内容</th><td>新卒採用プラットフォームの運営／選抜制採用イベントの企画・運営／採用コンサルティング・採用ブランディング／システム開発事業</td></tr>
+            <tr><th>事業内容</th><td>新卒採用プラットフォームの運営／採用イベントの企画・運営／採用コンサルティング・採用ブランディング／システム開発事業</td></tr>
             <tr><th>お問い合わせ</th><td><a href="mailto:event@nodako.co.jp" style="color:var(--blue);font-weight:700">event@nodako.co.jp</a></td></tr>
             <tr><th>Webサイト</th><td><a href="https://nodako.co.jp/" style="color:var(--blue);font-weight:700">https://nodako.co.jp/</a></td></tr>
           </table>
@@ -488,15 +539,16 @@
       <div class="foot-links">
         <div class="foot-col">
           <h5>SERVICE</h5>
-          <a href="#service">選抜制採用イベント</a>
-          <a href="#service">採用コンサルティング</a>
-          <a href="#service">採用ブランディング</a>
-          <a href="#service">システム開発</a>
+          <a href="service-event.html">新卒採用イベント</a>
+          <a href="service-consulting.html">採用コンサルティング</a>
+          <a href="service-branding.html">採用ブランディング</a>
+          <a href="service-development.html">システム開発</a>
         </div>
         <div class="foot-col">
           <h5>COMPANY</h5>
           <a href="#about">私たちについて</a>
           <a href="#works">実績</a>
+          <a href="#news">お知らせ</a>
           <a href="#company">会社概要</a>
           <a href="#contact">お問い合わせ</a>
           <a href="privacy.html">プライバシーポリシー</a>
