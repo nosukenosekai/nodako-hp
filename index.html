@@ -82,54 +82,35 @@
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
   .burger span{width:24px;height:2px;background:var(--navy);border-radius:2px;transition:.25s}
 
-  /* ---------- Hero ---------- */
-  .hero{position:relative;padding:172px 0 110px;background:var(--navy);color:#fff;overflow:hidden}
-  .hero::before{
-    content:"";position:absolute;inset:0;
-    background:
-      radial-gradient(720px 440px at 80% 4%,rgba(91,141,239,.55),transparent 62%),
-      radial-gradient(620px 480px at 10% 98%,rgba(21,199,154,.16),transparent 60%),
-      linear-gradient(155deg,#1f3f7c 0%,#27539a 52%,#1c3c72 100%);
-  }
-  .hero .grid-bg{
-    content:"";position:absolute;inset:0;opacity:.4;
-    background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
-    background-size:64px 64px;
-    -webkit-mask-image:radial-gradient(120% 90% at 60% 0%,#000,transparent 75%);
-            mask-image:radial-gradient(120% 90% at 60% 0%,#000,transparent 75%);
-  }
+  /* ---------- Hero（白基調・シンプル） ---------- */
+  .hero{position:relative;padding:150px 0 84px;background:#fff;color:var(--navy);border-bottom:1px solid var(--line)}
   .hero .wrap{position:relative;z-index:2}
-  .hero .label{color:#7fa7ff}
-  .hero .label::before{background:#7fa7ff}
   .hero h1{
     font-family:'Noto Sans JP',sans-serif;font-weight:900;
-    font-size:clamp(2.3rem,5.8vw,4.5rem);line-height:1.18;letter-spacing:-.01em;
-    margin:22px 0 0;
+    font-size:clamp(2.2rem,5.4vw,4.1rem);line-height:1.22;letter-spacing:-.01em;
+    margin:20px 0 0;color:var(--navy);
   }
-  .hero h1 .accent{
-    background:linear-gradient(120deg,#7fa7ff,#16e6a8);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  }
-  .hero p.lead{margin:28px 0 0;max-width:620px;font-size:clamp(1rem,1.4vw,1.12rem);color:#c4cfe6;line-height:2}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
+  .hero h1 .accent{color:var(--blue)}
+  .hero p.lead{margin:26px 0 0;max-width:600px;font-size:clamp(1rem,1.4vw,1.1rem);color:var(--muted);line-height:1.95}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
   .btn{
     display:inline-flex;align-items:center;gap:.6em;font-weight:700;font-size:.98rem;
     padding:.95em 1.7em;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s;
   }
-  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 30px rgba(37,99,255,.4)}
-  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(37,99,255,.5)}
-  .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.22)}
-  .btn-ghost:hover{background:rgba(255,255,255,.13);transform:translateY(-3px)}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 30px rgba(37,99,255,.32)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(37,99,255,.4)}
+  .btn-ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}
+  .btn-ghost:hover{background:var(--paper2);transform:translateY(-3px)}
   .btn .arr{transition:transform .2s}
   .btn:hover .arr{transform:translateX(4px)}
 
   .hero-stats{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:66px;
-    border-top:1px solid rgba(255,255,255,.12);padding-top:34px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:58px;
+    border-top:1px solid var(--line);padding-top:32px;
   }
-  .hero-stats .s .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;line-height:1}
-  .hero-stats .s .n span{font-size:.55em;color:#7fa7ff;margin-left:2px}
-  .hero-stats .s .t{font-size:.8rem;color:#9aa9c8;margin-top:8px}
+  .hero-stats .s .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--navy);line-height:1}
+  .hero-stats .s .n span{font-size:.55em;color:var(--blue);margin-left:2px}
+  .hero-stats .s .t{font-size:.8rem;color:var(--muted);margin-top:8px}
 
   /* ---------- Section base ---------- */
   section.block{padding:108px 0}
@@ -244,6 +225,13 @@
   .news-item .ttl{font-size:.98rem;font-weight:500;color:var(--navy)}
   .news-item .go{color:#9aa9c8;font-weight:700}
   a.news-item:hover .go{color:var(--blue)}
+  .news-feature{display:grid;grid-template-columns:300px 1fr;gap:30px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--line);transition:background .2s}
+  a.news-feature:hover{background:#fff}
+  .nf-img{border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:3/2;background:#fff}
+  .nf-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .nf-meta{display:flex;align-items:center;gap:12px}
+  .news-feature h3{margin-top:12px;font-size:1.08rem;font-weight:700;color:var(--navy);line-height:1.55}
+  .nf-go{display:inline-block;margin-top:14px;color:var(--blue);font-weight:700;font-size:.9rem}
 
   /* ---------- Footer ---------- */
   footer{background:linear-gradient(165deg,#1f3f7c,#16315e);color:#fff;padding:64px 0 30px}
@@ -279,6 +267,7 @@
     .news-item{grid-template-columns:auto 1fr;gap:8px 16px;row-gap:8px}
     .news-item .ttl{grid-column:1 / -1}
     .news-item .go{display:none}
+    .news-feature{grid-template-columns:1fr;gap:18px}
   }
   @media(max-width:560px){
     .hero-stats{grid-template-columns:repeat(2,1fr);gap:26px 18px}
@@ -309,7 +298,6 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="grid-bg"></div>
     <div class="wrap">
       <span class="label">Z-GEN RECRUITING COMPANY</span>
       <h1>Z世代と企業の、<br><span class="accent">まだ無い出会い</span>をつくる。</h1>
@@ -468,6 +456,14 @@
         <p>Nodakoの最新の取り組み・プレスリリースをお届けします。</p>
       </div>
       <div class="news-list reveal">
+        <a class="news-feature" href="https://careerfocus.co.jp/%e3%80%8e%e6%a0%aa%e5%bc%8f%e4%bc%9a%e7%a4%be%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%e3%83%8f%e3%82%a6%e3%82%b9%e3%82%b0%e3%83%ab%e3%83%bc%e3%83%97%e6%a7%98%e3%80%8f%ef%bd%9e%e6%96%b0%e5%8d%92%e6%8e%a1/" target="_blank" rel="noopener">
+          <div class="nf-img"><img src="news-the-shukatsu.jpg" alt="新卒採用イベント「THE 就活」参加後インタビュー（オープンハウスグループ様・CAREER FOCUS・Nodako）" loading="lazy"></div>
+          <div class="nf-body">
+            <div class="nf-meta"><span class="date">2025.09.14</span><span class="cat">インタビュー</span></div>
+            <h3>『株式会社オープンハウスグループ様』〜新卒採用イベント「THE 就活」イベント参加後インタビュー〜</h3>
+            <span class="nf-go">記事を読む →</span>
+          </div>
+        </a>
         <a class="news-item" href="https://www.atpress.ne.jp/news/423672" target="_blank" rel="noopener">
           <span class="date">2024.12.14</span>
           <span class="cat">イベント</span>
