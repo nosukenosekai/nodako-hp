@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>株式会社Nodako｜Z世代と企業の、まだ無い出会いをつくる。</title>
+<meta name="description" content="株式会社Nodakoは、Z世代インサイトを起点に新卒採用を設計する採用ブランディングカンパニー。選抜制採用イベント「THE 就活」の運営、採用コンサルティング、システム開発まで、企業の採用に新しい推進力を。" />
+<meta name="robots" content="noindex" /><!-- 下書き共有中：本番公開時にこの行を削除 -->
+<meta property="og:title" content="株式会社Nodako｜Z世代と企業の、まだ無い出会いをつくる。" />
+<meta property="og:description" content="Z世代インサイトを起点に新卒採用を設計する採用ブランディングカンパニー。選抜制採用イベント「THE 就活」運営・採用コンサル・システム開発。" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nodako.co.jp/" />
+<meta name="theme-color" content="#1b3a6b" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#1b3a6b;
+    --navy2:#24487e;
+    --navy-deep:#16315e;
+    --ink:#1b3a6b;
+    --blue:#2563ff;
+    --blue-l:#5b8def;
+    --mint:#15c79a;
+    --paper:#ffffff;
+    --paper2:#f4f7fc;
+    --line:#e3e9f4;
+    --text:#1a2542;
+    --muted:#65718e;
+    --grad:linear-gradient(120deg,#2563ff 0%,#4f86ff 100%);
+    --maxw:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Noto Sans JP',sans-serif;
+    color:var(--text);
+    background:var(--paper);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .en{font-family:'Space Grotesk','Outfit',sans-serif}
+  .label{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:.72rem;letter-spacing:.28em;font-weight:700;
+    color:var(--blue);text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:.6em;
+  }
+  .label::before{content:"";width:26px;height:2px;background:var(--blue);display:inline-block}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:saturate(160%) blur(14px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s,box-shadow .3s;
+  }
+  header.scrolled{border-color:var(--line);box-shadow:0 8px 30px rgba(10,22,51,.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.34rem;letter-spacing:-.02em;color:var(--navy)}
+  .brand .mark{
+    width:30px;height:30px;border-radius:9px;
+    background:var(--grad);position:relative;flex:0 0 auto;
+    box-shadow:0 6px 16px rgba(37,99,255,.35);
+  }
+  .brand .mark::after{content:"";position:absolute;inset:8px 8px auto auto;width:9px;height:9px;border-radius:50%;background:var(--mint)}
+  .menu{display:flex;align-items:center;gap:34px}
+  .menu a{font-size:.92rem;font-weight:500;color:var(--navy);opacity:.82;transition:opacity .2s}
+  .menu a:hover{opacity:1}
+  .nav-cta{
+    background:var(--navy);color:#fff;padding:.66em 1.4em;border-radius:999px;
+    font-size:.88rem;font-weight:700;transition:transform .2s,box-shadow .2s;
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,22,51,.25)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{width:24px;height:2px;background:var(--navy);border-radius:2px;transition:.25s}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;padding:172px 0 110px;background:var(--navy);color:#fff;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(720px 440px at 80% 4%,rgba(91,141,239,.55),transparent 62%),
+      radial-gradient(620px 480px at 10% 98%,rgba(21,199,154,.16),transparent 60%),
+      linear-gradient(155deg,#1f3f7c 0%,#27539a 52%,#1c3c72 100%);
+  }
+  .hero .grid-bg{
+    content:"";position:absolute;inset:0;opacity:.4;
+    background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(120% 90% at 60% 0%,#000,transparent 75%);
+            mask-image:radial-gradient(120% 90% at 60% 0%,#000,transparent 75%);
+  }
+  .hero .wrap{position:relative;z-index:2}
+  .hero .label{color:#7fa7ff}
+  .hero .label::before{background:#7fa7ff}
+  .hero h1{
+    font-family:'Noto Sans JP',sans-serif;font-weight:900;
+    font-size:clamp(2.3rem,5.8vw,4.5rem);line-height:1.18;letter-spacing:-.01em;
+    margin:22px 0 0;
+  }
+  .hero h1 .accent{
+    background:linear-gradient(120deg,#7fa7ff,#16e6a8);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .hero p.lead{margin:28px 0 0;max-width:620px;font-size:clamp(1rem,1.4vw,1.12rem);color:#c4cfe6;line-height:2}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
+  .btn{
+    display:inline-flex;align-items:center;gap:.6em;font-weight:700;font-size:.98rem;
+    padding:.95em 1.7em;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s;
+  }
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 30px rgba(37,99,255,.4)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(37,99,255,.5)}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.22)}
+  .btn-ghost:hover{background:rgba(255,255,255,.13);transform:translateY(-3px)}
+  .btn .arr{transition:transform .2s}
+  .btn:hover .arr{transform:translateX(4px)}
+
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:66px;
+    border-top:1px solid rgba(255,255,255,.12);padding-top:34px;
+  }
+  .hero-stats .s .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;line-height:1}
+  .hero-stats .s .n span{font-size:.55em;color:#7fa7ff;margin-left:2px}
+  .hero-stats .s .t{font-size:.8rem;color:#9aa9c8;margin-top:8px}
+
+  /* ---------- Section base ---------- */
+  section.block{padding:108px 0}
+  .sec-head{max-width:720px}
+  .sec-head h2{font-weight:900;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;letter-spacing:-.01em;margin:16px 0 0;color:var(--navy)}
+  .sec-head p{margin-top:18px;color:var(--muted);font-size:1.02rem}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+  .center .label{justify-content:center}
+
+  /* ---------- About ---------- */
+  .about{background:var(--paper2)}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;margin-top:56px}
+  .about-copy h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;line-height:1.5;color:var(--navy)}
+  .about-copy h3 em{font-style:normal;color:var(--blue)}
+  .about-copy p{margin-top:22px;color:var(--muted);font-size:1.02rem}
+  .about-points{display:flex;flex-direction:column;gap:16px}
+  .pt{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 26px;transition:transform .25s,box-shadow .25s}
+  .pt:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(10,22,51,.08)}
+  .pt .ico{flex:0 0 auto;width:46px;height:46px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#fff;font-family:'Space Grotesk';font-weight:700;font-size:1.05rem}
+  .pt h4{font-size:1.06rem;font-weight:700;color:var(--navy)}
+  .pt p{margin-top:5px;font-size:.92rem;color:var(--muted)}
+
+  /* ---------- Service ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:56px}
+  .svc{
+    position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:40px 38px;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s;
+  }
+  .svc::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--grad);transition:width .4s}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 56px rgba(10,22,51,.1);border-color:transparent}
+  .svc:hover::before{width:100%}
+  .svc .no{font-family:'Space Grotesk';font-weight:700;font-size:.82rem;color:var(--blue);letter-spacing:.1em}
+  .svc h3{font-size:1.34rem;font-weight:900;margin:14px 0 0;color:var(--navy)}
+  .svc .sub{font-family:'Outfit';font-weight:600;font-size:.82rem;letter-spacing:.04em;color:#9aa9c8;margin-top:4px}
+  .svc p{margin-top:16px;color:var(--muted);font-size:.96rem}
+  .svc .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .svc .tags span{font-size:.76rem;color:var(--navy);background:var(--paper2);border:1px solid var(--line);padding:.35em .9em;border-radius:999px}
+
+  /* ---------- Works / 実績 ---------- */
+  .works{background:linear-gradient(165deg,#1f3f7c,#1b3a6b 60%,#16315e);color:#fff;position:relative;overflow:hidden}
+  .works::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 420px at 85% 8%,rgba(91,141,239,.42),transparent 62%)}
+  .works .wrap{position:relative;z-index:2}
+  .works .sec-head h2{color:#fff}
+  .works .sec-head p{color:#b9c4dd}
+  .works .label{color:#7fa7ff}.works .label::before{background:#7fa7ff}
+  .case{
+    margin-top:56px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.13);border-radius:24px;padding:48px;
+    display:grid;grid-template-columns:1fr 1px 1.15fr;gap:48px;align-items:center;
+  }
+  .case .vline{background:rgba(255,255,255,.13)}
+  .case-tag{display:inline-block;font-family:'Space Grotesk';font-weight:700;font-size:.74rem;letter-spacing:.16em;color:#16e6a8;border:1px solid rgba(22,230,168,.4);padding:.4em 1em;border-radius:999px}
+  .case h3{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:900;margin:20px 0 0;line-height:1.4}
+  .case .desc{margin-top:18px;color:#c4cfe6;font-size:.98rem}
+  .case .co{margin-top:26px}
+  .case .co .cap{font-size:.74rem;letter-spacing:.2em;color:#8fa0c2;font-family:'Space Grotesk'}
+  .case .co .names{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .case .co .names span{font-size:.84rem;font-weight:500;color:#dbe3f4;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:.5em 1em;border-radius:10px}
+  .case-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 32px}
+  .cm .n{font-family:'Space Grotesk';font-weight:700;font-size:clamp(2rem,3.8vw,3rem);line-height:1;background:linear-gradient(120deg,#7fa7ff,#16e6a8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .cm .n span{font-size:.42em;-webkit-text-fill-color:#7fa7ff}
+  .cm .t{margin-top:10px;font-size:.86rem;color:#aab6d2}
+  .works-note{margin-top:26px;font-size:.8rem;color:#8492b3}
+
+  /* ---------- Why ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+  .why{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 30px}
+  .why .ic{width:50px;height:50px;border-radius:14px;background:var(--paper2);display:grid;place-items:center;margin-bottom:20px}
+  .why .ic svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:1.8}
+  .why h4{font-size:1.16rem;font-weight:900;color:var(--navy)}
+  .why p{margin-top:12px;color:var(--muted);font-size:.94rem}
+
+  /* ---------- Company ---------- */
+  .company{background:var(--paper2)}
+  .comp-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;margin-top:56px;align-items:start}
+  .comp-vis{top:100px;background:linear-gradient(160deg,#1f3f7c,#1b3a6b 65%,#16315e);border-radius:24px;padding:44px;color:#fff;overflow:hidden;position:relative}
+  .comp-vis::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 320px at 80% 0%,rgba(91,141,239,.5),transparent 60%)}
+  .comp-vis .inner{position:relative;z-index:2}
+  .comp-vis .big{font-family:'Outfit';font-weight:800;font-size:2.2rem;letter-spacing:-.02em}
+  .comp-vis .jp{color:#9aa9c8;font-size:.92rem;margin-top:6px}
+  .comp-vis .quote{margin-top:30px;font-size:1.08rem;line-height:1.9;font-weight:500}
+  .comp-vis .quote span{color:#16e6a8}
+  table.info{width:100%;border-collapse:collapse}
+  table.info th,table.info td{text-align:left;padding:20px 4px;border-bottom:1px solid var(--line);font-size:.96rem;vertical-align:top}
+  table.info th{width:170px;color:var(--navy);font-weight:700;white-space:nowrap}
+  table.info td{color:var(--muted)}
+
+  /* ---------- CTA ---------- */
+  .cta{padding:0}
+  .cta-inner{background:var(--grad);border-radius:28px;padding:72px 56px;text-align:center;color:#fff;position:relative;overflow:hidden}
+  .cta-inner::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 300px at 15% 120%,rgba(22,230,168,.4),transparent 60%)}
+  .cta-inner *{position:relative;z-index:2}
+  .cta-inner h2{font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:900;line-height:1.4}
+  .cta-inner p{margin-top:18px;color:rgba(255,255,255,.9);font-size:1.04rem}
+  .cta-inner .btn{margin-top:36px;background:#fff;color:var(--navy)}
+  .cta-inner .btn:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.2)}
+  .cta-mail{margin-top:22px;font-family:'Space Grotesk';font-size:.94rem;color:rgba(255,255,255,.85)}
+
+  /* ---------- Footer ---------- */
+  footer{background:linear-gradient(165deg,#1f3f7c,#16315e);color:#fff;padding:64px 0 30px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:34px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-brand .brand{color:#fff}
+  .foot-brand p{margin-top:16px;color:#94a2c2;font-size:.9rem;max-width:340px}
+  .foot-links{display:flex;gap:54px;flex-wrap:wrap}
+  .foot-col h5{font-family:'Space Grotesk';font-size:.74rem;letter-spacing:.18em;color:#7fa7ff;margin-bottom:16px}
+  .foot-col a{display:block;color:#c4cfe6;font-size:.9rem;margin-bottom:11px;opacity:.85;transition:opacity .2s}
+  .foot-col a:hover{opacity:1}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;color:#7180a0;font-size:.8rem}
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:900px){
+    .menu{
+      position:fixed;top:74px;left:0;right:0;background:#fff;flex-direction:column;gap:0;
+      border-bottom:1px solid var(--line);padding:8px 0;transform:translateY(-130%);transition:transform .3s;box-shadow:0 20px 40px rgba(10,22,51,.1)
+    }
+    .menu.open{transform:translateY(0)}
+    .menu a{width:100%;padding:14px 28px}
+    .menu .nav-cta{margin:10px 28px;text-align:center}
+    .burger{display:flex}
+    .about-grid,.comp-grid{grid-template-columns:1fr;gap:40px}
+    .svc-grid,.why-grid,.case-metrics{grid-template-columns:1fr}
+    .case{grid-template-columns:1fr;gap:34px;padding:34px}
+    .case .vline{display:none}
+    .case-metrics{grid-template-columns:repeat(2,1fr)}
+    .comp-vis{position:static}
+  }
+  @media(max-width:560px){
+    .hero-stats{grid-template-columns:repeat(2,1fr);gap:26px 18px}
+    section.block{padding:78px 0}
+    .cta-inner{padding:52px 26px}
+    .hero{padding:140px 0 84px}
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mark"></span>Nodako</a>
+    <nav class="menu" id="menu">
+      <a href="#about">About</a>
+      <a href="#service">Service</a>
+      <a href="#works">Works</a>
+      <a href="#company">Company</a>
+      <a href="#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="grid-bg"></div>
+    <div class="wrap">
+      <span class="label">Z-GEN RECRUITING COMPANY</span>
+      <h1>Z世代と企業の、<br><span class="accent">まだ無い出会い</span>をつくる。</h1>
+      <p class="lead">
+        いま、優秀な学生ほど従来の採用フローでは出会えない。Nodakoは、Z世代のリアルなインサイトを起点に「選ばれる採用」を設計する採用ブランディングカンパニーです。イベント・コンサル・プロダクトまで、企業の採用に新しい推進力を。
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">採用の相談をする <span class="arr">→</span></a>
+        <a href="#works" class="btn btn-ghost">実績を見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="s"><div class="n">94<span>%</span></div><div class="t">参加学生の満足度<br>（THE 就活）</div></div>
+        <div class="s"><div class="n">91<span>%</span></div><div class="t">早慶・MARCH<br>上位校比率</div></div>
+        <div class="s"><div class="n">2<span>軸</span></div><div class="t">採用支援 ×<br>システム開発</div></div>
+        <div class="s"><div class="n">100<span>%</span></div><div class="t">企業ごとの<br>オーダーメイド設計</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block about" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">About</span>
+        <h2>採用は「母集団集め」から、<br>「ブランドで選ばれる」へ。</h2>
+        <p>求人広告を出して待つ時代は終わりました。Z世代は、企業のカルチャーやリアルな声に共感して動きます。Nodakoは学生インサイトの当事者として、企業の魅力を“伝わる形”に翻訳します。</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <h3>「のどか（Nodako）」は、<br>学生と企業が<em>本音で出会える</em>場をつくる会社。</h3>
+          <p>大量の母集団を追うのではなく、企業が本当に会いたい学生と、深く・誠実に出会う。Nodakoは選抜制イベントの運営から採用ブランディング、そしてそれを支えるシステム開発までを一気通貫で手がけ、採用を「数」ではなく「質」で前に進めます。</p>
+        </div>
+        <div class="about-points reveal">
+          <div class="pt"><div class="ico">01</div><div><h4>Z世代インサイト起点</h4><p>学生の生の声・行動データを採用設計の土台に置く。</p></div></div>
+          <div class="pt"><div class="ico">02</div><div><h4>選抜 × 少人数マッチング</h4><p>厳選された学生と企業を、深く出会わせる場づくり。</p></div></div>
+          <div class="pt"><div class="ico">03</div><div><h4>プロダクトで仕組み化</h4><p>採用プラットフォームを自社開発し、継続的に運用へ。</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section class="block" id="service">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Service</span>
+        <h2>採用の「入口」から「仕組み」まで、<br>4つの事業で支援する。</h2>
+        <p>単発のイベントで終わらせない。出会いを設計し、ブランドを磨き、それを支えるプロダクトまで。企業の採用を一気通貫で前進させます。</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc reveal">
+          <div class="no">SERVICE 01</div>
+          <h3>選抜制採用イベント</h3>
+          <div class="sub">Recruiting Events</div>
+          <p>厳選した学生と企業が直接出会う、選抜制の採用イベントを企画・運営。共催イベント「THE 就活」では、上位校の意欲ある学生と企業の質の高いマッチングを実現しています。</p>
+          <div class="tags"><span>イベント企画</span><span>学生集客</span><span>当日運営</span></div>
+        </div>
+        <div class="svc reveal">
+          <div class="no">SERVICE 02</div>
+          <h3>採用コンサルティング</h3>
+          <div class="sub">Recruiting Consulting</div>
+          <p>採用戦略の設計から、ターゲット定義・選考フロー改善・内定者フォローまで伴走。Z世代の意思決定を理解したうえで、企業ごとにオーダーメイドの採用を組み立てます。</p>
+          <div class="tags"><span>採用戦略</span><span>選考設計</span><span>母集団形成</span></div>
+        </div>
+        <div class="svc reveal">
+          <div class="no">SERVICE 03</div>
+          <h3>採用ブランディング</h3>
+          <div class="sub">Employer Branding</div>
+          <p>「なぜこの会社で働くのか」を学生の言葉に翻訳。カルチャーや人の魅力を、Z世代に伝わるコンテンツ・コミュニケーション設計へと落とし込みます。</p>
+          <div class="tags"><span>採用広報</span><span>コンテンツ設計</span><span>Z世代リサーチ</span></div>
+        </div>
+        <div class="svc reveal">
+          <div class="no">SERVICE 04</div>
+          <h3>システム開発</h3>
+          <div class="sub">System Development</div>
+          <p>新卒採用プラットフォームを自社で開発・運営。採用の現場で得た知見をプロダクトに還元し、企業の採用活動を継続的に仕組み化します。</p>
+          <div class="tags"><span>採用プラットフォーム</span><span>自社開発</span><span>運用</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="block works" id="works">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Works</span>
+        <h2>選抜制新卒採用イベント<br>「THE 就活」開催実績</h2>
+        <p>株式会社CAREER FOCUSとの共催で、厳選された学生と注目企業の新たな出会いを創出しました。</p>
+      </div>
+      <div class="case reveal">
+        <div class="case-left">
+          <span class="case-tag">SELECTED EVENT</span>
+          <h3>THE 就活</h3>
+          <p class="desc">2024年12月14日、TOMOSUBA（東京都千代田区）にて開催。少人数マッチング形式で、学生と企業が“他では得られない情報”に出会う場を実現しました。</p>
+          <div class="co">
+            <div class="cap">PARTICIPATING COMPANIES</div>
+            <div class="names">
+              <span>GMOインターネットグループ</span>
+              <span>NTT都市開発</span>
+              <span>オープンハウスグループ</span>
+              <span>森ビル</span>
+            </div>
+          </div>
+        </div>
+        <div class="vline"></div>
+        <div class="case-metrics">
+          <div class="cm"><div class="n">94<span>%</span></div><div class="t">参加学生の「大満足・満足」</div></div>
+          <div class="cm"><div class="n">32<span>名</span></div><div class="t">選抜参加学生数</div></div>
+          <div class="cm"><div class="n">91<span>%</span></div><div class="t">早慶（50%）＋MARCH（41%）</div></div>
+          <div class="cm"><div class="n">4<span>社</span></div><div class="t">参加企業数</div></div>
+        </div>
+      </div>
+      <p class="works-note">※ 数値は2024年12月14日開催「THE 就活」（株式会社CAREER FOCUS・株式会社Nodako 共催）の開催実績に基づきます。</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="block" id="why">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="label">Why Nodako</span>
+        <h2>Nodakoが選ばれる、3つの理由。</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why reveal">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+          <h4>当事者としての<br>Z世代インサイト</h4>
+          <p>学生のリアルな価値観・行動を肌で理解しているからこそ、机上ではない“効く”採用施策を設計できます。</p>
+        </div>
+        <div class="why reveal">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></div>
+          <h4>イベント単発で<br>終わらせない</h4>
+          <p>出会いの場づくりから、戦略・ブランディング・プロダクトまで一気通貫。採用を“続く仕組み”に変えます。</p>
+        </div>
+        <div class="why reveal">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 16.5 7.1 18.2 8 12.7 4 8.8 9.5 8z"/></svg></div>
+          <h4>「質」で前進する<br>採用設計</h4>
+          <p>母集団の量ではなく、本当に会いたい学生との深い出会いを。納得感の高いマッチングを追求します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY -->
+  <section class="block company" id="company">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Company</span>
+        <h2>会社概要</h2>
+      </div>
+      <div class="comp-grid">
+        <div class="comp-vis reveal">
+          <div class="inner">
+            <div class="big">Nodako, Inc.</div>
+            <div class="jp">株式会社Nodako</div>
+            <p class="quote">学生と企業が、<span>本音で出会える</span>場を。<br>採用を「数」から「質」へ。</p>
+          </div>
+        </div>
+        <div class="reveal">
+          <table class="info">
+            <tr><th>会社名</th><td>株式会社Nodako（Nodako, Inc.）</td></tr>
+            <tr><th>設立</th><td>2024年6月6日（令和6年6月6日）</td></tr>
+            <tr><th>資本金</th><td>50万円</td></tr>
+            <tr><th>代表取締役</th><td>萩原 琴弥</td></tr>
+            <tr><th>所在地</th><td>東京都渋谷区</td></tr>
+            <tr><th>事業内容</th><td>新卒採用プラットフォームの運営／選抜制採用イベントの企画・運営／採用コンサルティング・採用ブランディング／システム開発事業</td></tr>
+            <tr><th>お問い合わせ</th><td><a href="mailto:event@nodako.co.jp" style="color:var(--blue);font-weight:700">event@nodako.co.jp</a></td></tr>
+            <tr><th>Webサイト</th><td><a href="https://nodako.co.jp/" style="color:var(--blue);font-weight:700">https://nodako.co.jp/</a></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="block cta" id="contact">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <h2>採用を、次のステージへ。</h2>
+        <p>Z世代に「選ばれる採用」を、一緒に設計しませんか。<br>イベント参加・採用コンサル・プラットフォーム導入のご相談を承ります。</p>
+        <a href="mailto:event@nodako.co.jp?subject=採用のご相談（Nodako）" class="btn">メールで相談する <span class="arr">→</span></a>
+        <div class="cta-mail">event@nodako.co.jp</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="mark"></span>Nodako</a>
+        <p>Z世代と企業の、まだ無い出会いをつくる。採用ブランディングカンパニー 株式会社Nodako。</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h5>SERVICE</h5>
+          <a href="#service">選抜制採用イベント</a>
+          <a href="#service">採用コンサルティング</a>
+          <a href="#service">採用ブランディング</a>
+          <a href="#service">システム開発</a>
+        </div>
+        <div class="foot-col">
+          <h5>COMPANY</h5>
+          <a href="#about">私たちについて</a>
+          <a href="#works">実績</a>
+          <a href="#company">会社概要</a>
+          <a href="#contact">お問い合わせ</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2025 Nodako, Inc. All rights reserved.</div>
+      <div>東京都渋谷区 ｜ event@nodako.co.jp</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // header shadow on scroll
+  const header=document.getElementById('header');
+  addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>10));
+  // mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
