@@ -73,8 +73,8 @@
   .menu{display:flex;align-items:center;gap:34px}
   .menu a{font-size:.92rem;font-weight:500;color:var(--navy);opacity:.82;transition:opacity .2s}
   .menu a:hover{opacity:1}
-  .nav-cta{
-    background:var(--navy);color:#fff;padding:.66em 1.4em;border-radius:999px;
+  .menu a.nav-cta{
+    background:var(--navy);color:#fff;opacity:1;padding:.66em 1.4em;border-radius:999px;
     font-size:.88rem;font-weight:700;transition:transform .2s,box-shadow .2s;
   }
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,22,51,.25)}
@@ -285,11 +285,11 @@
   <div class="wrap nav">
     <a href="#top" class="brand"><span class="mark"></span>Nodako</a>
     <nav class="menu" id="menu">
-      <a href="#about">About</a>
-      <a href="#service">Service</a>
-      <a href="#works">Works</a>
-      <a href="#news">News</a>
-      <a href="#company">Company</a>
+      <a href="#about">私たちについて</a>
+      <a href="#service">サービス</a>
+      <a href="#works">実績</a>
+      <a href="#news">お知らせ</a>
+      <a href="#company">会社概要</a>
       <a href="#contact" class="nav-cta">お問い合わせ</a>
     </nav>
     <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
@@ -404,13 +404,13 @@
           <h3>THE 就活</h3>
           <p class="desc">2024年12月14日、TOMOSUBA（東京都千代田区）にて開催。少人数マッチング形式で、学生と企業が“他では得られない情報”に出会う場を実現しました。</p>
           <div class="co">
-            <div class="cap">PARTICIPATING COMPANIES</div>
-            <!-- ロゴ画像を入れる場合：<div class="logo-tile"><img src="logo-gmo.png" alt="GMOインターネットグループ"></div> のように差し替え -->
+            <div class="cap">参加企業</div>
+            <!-- ロゴ画像が用意できたら <div class="logo-tile"><img src="logo-gmo.png" alt="GMOインターネットグループ様"></div> のように差し替え -->
             <div class="logo-wall">
-              <div class="logo-tile">GMOインターネット<br>グループ</div>
-              <div class="logo-tile">NTT都市開発</div>
-              <div class="logo-tile">オープンハウス<br>グループ</div>
-              <div class="logo-tile">森ビル</div>
+              <div class="logo-tile">GMOインターネット<br>グループ様</div>
+              <div class="logo-tile">NTT都市開発様</div>
+              <div class="logo-tile">オープンハウス<br>グループ様</div>
+              <div class="logo-tile">森ビル様</div>
             </div>
           </div>
         </div>
