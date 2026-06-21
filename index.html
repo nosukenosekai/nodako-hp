@@ -168,10 +168,10 @@
   .logo-wall{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
   .logo-tile{
     display:flex;align-items:center;justify-content:center;text-align:center;
-    min-height:62px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;
+    min-height:74px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;
     background:#fff;font-size:.82rem;font-weight:700;color:var(--navy);line-height:1.3;
   }
-  .logo-tile img{max-height:34px;width:auto}
+  .logo-tile img{max-height:36px;max-width:90%;width:auto;height:auto;object-fit:contain}
   .case-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 32px}
   .cm .n{font-family:'Space Grotesk';font-weight:700;font-size:clamp(2rem,3.8vw,3rem);line-height:1;color:var(--blue)}
   .cm .n span{font-size:.42em;color:var(--blue-l)}
@@ -404,13 +404,12 @@
           <h3>THE 就活</h3>
           <p class="desc">2024年12月14日、TOMOSUBA（東京都千代田区）にて開催。少人数マッチング形式で、学生と企業が“他では得られない情報”に出会う場を実現しました。</p>
           <div class="co">
-            <div class="cap">参加企業</div>
-            <!-- ロゴ画像が用意できたら <div class="logo-tile"><img src="logo-gmo.png" alt="GMOインターネットグループ様"></div> のように差し替え -->
+            <div class="cap">参加企業様</div>
             <div class="logo-wall">
-              <div class="logo-tile">GMOインターネット<br>グループ様</div>
-              <div class="logo-tile">NTT都市開発様</div>
-              <div class="logo-tile">オープンハウス<br>グループ様</div>
-              <div class="logo-tile">森ビル様</div>
+              <div class="logo-tile"><img src="logo-gmo.svg" alt="GMOインターネットグループ様"></div>
+              <div class="logo-tile"><img src="logo-nttud.svg" alt="NTT都市開発様"></div>
+              <div class="logo-tile"><img src="logo-openhouse.svg" alt="オープンハウスグループ様"></div>
+              <div class="logo-tile"><img src="logo-mori.png" alt="森ビル様"></div>
             </div>
           </div>
         </div>
